@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejashree Enterprises</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="#hero">Tejashree Enterprises</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Expertise</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="hero" class="video-container">
+        <video autoplay loop muted>
+            <source src="./assets/MainVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+        <div class="content">
+          <h1 class="mainHeading">TEJASHREE ENTERPRISES</h1>
+          <p class="mainPara">Complete Painting Solutions For Residential And Commercial Spaces. Quality finishes, <br> interior and exterior.</p>
+          <img src="./assets/Scroll down.gif" class="small-logo" alt="Scroll down">
+        </div>
+        <a href="#contact" class="cta-button">Get Started</a>
+    </div>
+
+    <section id="about">
+        <h2>Origin Story.</h2>
+        <p>Tejashree Enterprise is a trusted painting company with 20 years of experience, dedicated to transforming spaces with quality craftsmanship. Our skilled team of painters works closely with clients to bring their vision to life, ensuring exceptional service and results for every project, whether residential or commercial. We are committed to helping you enhance your property with a fresh, professional touch.</p>
+    </section>
+
+    <section id="experience">
+        <h2>Service Portfolio.</h2>
+        <div class="experience-item">
+            <h3>Residential Painting</h3>
+            <p>We've helped hundreds of homeowners transform their living spaces with our expert interior and exterior painting services.</p>
+            <br>
+        </div>
+        <div class="experience-item">
+            <h3>Commercial Painting</h3>
+            <p>Our expertise extends to office spaces, retail locations, and industrial properties, catering to businesses of all sizes.</p>
+            <br>
+        </div>
+        <div class="experience-item">
+            <h3>Specialty Finishes</h3>
+            <p>We offer a range of specialty finishes and textures to add unique character to your spaces.</p>
+            <br>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Our Best Works.</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="./assets/Projects/work 1.jpg" alt="Modern Living Room">
+                <div class="portfolio-item-content">
+                    <h3>Goel Ganga Group</h3>
+                    <p>A real estate development conglomerate spread across Pune, Mumbai and Nagpur in the Indian state of Maharashtra.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="./assets/Projects/work 2.jpg" alt="Corporate Office">
+                <div class="portfolio-item-content">
+                    <h3>Pharande Spaces</h3>
+                    <p>One of the most renowned developers in PCMC & Pune.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="./assets/Projects/work.jpg" alt="Exterior Makeover">
+                <div class="portfolio-item-content">
+                    <h3>Mantra Properties</h3>
+                    <p>Established in 2007, Mantra Properties has swiftly expanded across Pune's skyline.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us.</h2>
+        <form onsubmit="sendmail() ; reset() ; return false;">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Address" rows="3" required></textarea>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        
+    </section>
+
+    <footer>
+        <div id="footer">
+            <div id="subscribe">
+                <h3>Subscribe To Mail Updates!</h3>
+                <a href="https://forms.gle/zQEf5HFHoPPVH4RMA"><button >Subscribe</button></a>
+            </div>
+            <div id="social">
+                <!-- <a href="/youtube" >Youtube</a>
+                <a href="/linkedin" >Linkedin</a> -->
+            </div>
+            <p id="love">Made with ❤️ by NetContenta, in India.</p>
+            <p id="copyright">&copy; 2024, All rights reserved.</p>
+          </div>
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./index.js"></script>
+    </body>
+    </html>

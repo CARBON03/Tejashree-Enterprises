@@ -1,0 +1,510 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  line-height: 1.6;
+  color: #F5F5F5;
+  background: linear-gradient(135deg, #0A1929, #4A0E2E, #1A3A3A, #2C3539);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  min-height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+nav {
+  background-color: #F5F5F5;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1000px) {
+  .nav-links {
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    height: calc(100vh - 70px);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #F5F5F5;
+    transition: right 0.5s ease;
+    padding-top: 2rem;
+  }
+
+  .nav-links li {
+    margin: 1.5rem 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav-active {
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  nav.shrink .nav-content {
+    padding: 0.5rem 1rem;
+  }
+
+  nav.shrink .logo a {
+    font-size: 1.25rem;
+  }
+
+  nav.shrink .nav-links a {
+    font-size: 0.9rem;
+  }
+}
+
+section {
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+  color: #F5F5F5;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -2;
+  filter: blur(5px);
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+#hero {
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center;  
+  color: #F5F5F5;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 2.2rem;
+  padding: 0%;
+  margin: 0%;
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.small-logo {
+  width: 200px; 
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  width: 10em;
+  background-color: black;
+  color: #F5F5F5;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: black;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about p {
+  text-align: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: 1.1rem;
+}
+
+#about h2 {
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+#experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #F5F5F5;
+  color: black;
+}
+
+#experience h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+  color: black;
+}
+
+#experience .experience-item {
+  align-self: flex-start;
+}
+
+.experience-item h3{
+  font-size: 1.5rem;
+}
+
+#experience p {
+  font-size: 1.1rem;
+}
+
+#portfolio {
+  background: none;
+}
+
+#portfolio h2 {
+  text-align: center;
+  font-size: 2.7rem;
+  padding-bottom: 4rem;
+}
+
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.portfolio-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.portfolio-item-content {
+  padding: 1rem;
+}
+
+.portfolio-item-content p{
+  font-size: 1rem;
+}
+
+.portfolio-item-content h3{
+  font-size: 1.5rem;
+}
+
+#contact {
+  background: #F5F5F5;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+#contact h2 {
+  margin: 0%;
+  margin-bottom: 100px;
+  font-size: 3rem;
+  background: #F5F5F5;
+  color: black;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: black;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+  
+}
+
+button {
+  background-color: black;
+  color: #F5F5F5;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+   background-color: black;
+  color: #F5F5F5;
+}
+
+#footer {
+  background-color:black;
+  color: #F5F5F5;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: auto;
+  z-index: 500;
+}
+
+#subscribe {
+  margin-bottom: 30px;
+}
+
+#subscribe h3 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: 3rem;
+}
+
+
+#subscribe button {
+  padding: 10px 30px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#subscribe button:hover {
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+#social {
+  margin-bottom: 30px;
+}
+
+#social a {
+  color: #ffffff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+#social a:hover {
+  color: #ECDFCC;
+}
+
+#love {
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #F5F5F5;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 1001px) {
+  #love {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #F5F5F5;
+    font-size: .7rem;
+  }
+}
+
+#copyright {
+  font-size: 0.8em;
+  color: #888;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#footer > div, #footer > p {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@media screen and (min-width: 1001px) {
+  h1, h2 {
+    font-size: 5rem;
+  }
+  
+  p {
+    font-size: 1.5rem;
+  }
+  
+  #hero h1 {
+    padding-top: 3rem;
+    font-size: 5rem;
+  }
+  
+  #hero p {
+    font-size: 1.5rem;
+  }
+  
+  #about h2 {
+    font-size: 5rem;
+  }
+  
+  #about p {
+    font-size: 1.5rem;
+  }
+  
+  #experience h2 {
+    font-size: 5rem;
+  }
+  
+  #experience p {
+    font-size: 1.5rem;
+  }
+  
+  #portfolio h2 {
+    font-size: 5rem;
+  }
+
+  button:hover {
+    background-color: white;
+    color: black;
+    border: solid 2px black;
+  }
+
+  .cta-button:hover {
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+  }
+ 
+  .portfolio-item-content p{
+    font-size: 1rem;
+  }
+
+  .portfolio-item-content h3{
+    font-size: 1.5rem;
+  }
+
+  #love{
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #F5F5F5;
+    font-size: 1rem;
+  }
+
+  #subscribe button:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+  }
+}
